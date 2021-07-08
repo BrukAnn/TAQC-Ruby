@@ -1,15 +1,17 @@
 =begin
-Написать функцию,
-которая получает url и выводит подробную информацию о нем.
+Написать функцию,которая получает url и выводит подробную информацию о нем.
 Например: url “https://career.softserveinc.com/
 en-us/learning-and-certification/formats-2/”,
-информация
-“протокол: https, домен: career.softserveinc.com,
+информация“протокол: https, домен: career.softserveinc.com,
 путь: en-us/learning-and-certification/formats-2/”.
 =end
 
 #URI - это модуль, предоставляющий классы
 # для работы с унифицированными идентификаторами ресурсов
+
+# require ищет по абсолютному пути,
+# ему обяательно надо указать, относительно чего искать
+
 require 'uri'
 
 uri = URI("https://career.softserveinc.com/en-us/learning-and-certification/formats-2/")
