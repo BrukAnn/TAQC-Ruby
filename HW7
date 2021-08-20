@@ -1,0 +1,35 @@
+=begin
+Напишите функцию, которая возвращает логин в виде строки случайной длины в диапазоне от 2 до 20 символов. 
+Первый символ - латинская буква верхнего регистра, остальные символы - латинские буквы нижнего регистра или цифры.
+=end
+
+
+
+def log()
+	
+	let = 'abcdefghijklmnopqrstuvwxyz1234567890'
+	alh = 'abcdefghijklmonpqrstuvwxyz'
+	
+	
+	log = ''
+	log += alh[rand(0..alh.length - 1)].capitalize!
+	
+	
+	for el in 0..rand(1..20)
+		log += let[rand(0..let.length - 1)]
+	end
+	
+	return log	
+end
+
+puts log
+
+
+
+
+#Напишите собственную функцию shuffle.
+def shuffle 
+    array = ["wow", "awesom", "nice", "like"]
+    array.sort_by!{rand}
+end
+puts shuffle
